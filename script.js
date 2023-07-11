@@ -22,9 +22,8 @@ function getComputerChoice() {
     }
 }
 
-    let playerScore = 0;
-    let computerScore = 0;
-
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
     // this function oversees the game
@@ -68,16 +67,25 @@ function playRound(playerSelection, computerSelection) {
 
 
 function game() {
-    // play a 5 round game using loops. keep score. winner/loser. player input through prompt.
+    // play a first to 5 game using loops. keep score. winner/loser. player input through prompt.
     
-    for (let i = 0; i < 5; i++) {
+    // for (let i = 0; i < 5; i++) {
+    //     const computerSelection = getComputerChoice();
+    //     let playerSelection = prompt("Enter you choice").toUpperCase();
+    //     console.log(computerSelection);
+    //     console.log(playRound(playerSelection, computerSelection));
+    //     console.log(`Your score: ${playerScore}`);
+    //     console.log(`Computer score: ${computerScore}`);
+
+    // }
+
+    while (playerScore < 5 && computerScore < 5) {
         const computerSelection = getComputerChoice();
         let playerSelection = prompt("Enter you choice").toUpperCase();
         console.log(computerSelection);
         console.log(playRound(playerSelection, computerSelection));
         console.log(`Your score: ${playerScore}`);
         console.log(`Computer score: ${computerScore}`);
-
     }
 }
 
