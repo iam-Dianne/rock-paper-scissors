@@ -22,30 +22,43 @@ function getComputerChoice() {
     }
 }
 
+    let playerScore = 0;
+    let computerScore = 0;
+
 
 function playRound(playerSelection, computerSelection) {
     // this function oversees the game
+    // also states the winner and the loser of the round
 
-    let outcome;
     let playerChoice = playerSelection;
     let computerChoice = computerSelection;
+    
+    function winText() {
+        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+        playerScore++;
+    }
+
+    function loseText() {
+        console.log(`You lose! ${computerChoice} beats ${playerChoice}`)
+        computerScore++;
+    }
 
     if (playerChoice === "ROCK" && computerChoice == "ROCK") {
         console.log("tie!");
     } else if (playerChoice === "ROCK" && computerChoice === "PAPER") {
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+        loseText();
     } else if (playerChoice === "ROCK" && computerChoice === "SCISSORS") {
-        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+        winText();
     } else if (playerChoice === "PAPER" && computerChoice === "ROCK") {
-        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+        winText();
     } else if (playerChoice === "PAPER" && computerChoice === "PAPER") {
         console.log("Tie!");
     } else if (playerChoice === "PAPER" && computerChoice === "SCISSORS") {
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+        loseText();
     } else if (playerChoice === "SCISSORS" && computerChoice === "ROCK") {
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+        loseText();
     } else if (playerChoice === "SCISSORS" && computerChoice === "PAPER") {
-        console.log(`You win! ${playerChoice} beats ${computerChoice}`); 
+        winText();
     } else if (playerChoice === "SCISSORS" && computerChoice === "SCISSORS") {
         console.log("Tie!");
     } else {
@@ -53,7 +66,24 @@ function playRound(playerSelection, computerSelection) {
     }
  }
 
-const playerSelection = "scissors".toUpperCase();
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    // play a 5 round game using loops. keep score. winner/loser. player input through prompt.
+    
+    for (let i = 0; i < 5; i++) {
+        const computerSelection = getComputerChoice();
+        let playerSelection = prompt("Enter you choice").toUpperCase();
+        console.log(computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(`Your score: ${playerScore}`);
+        console.log(`Computer score: ${computerScore}`);
+
+    }
+}
+
+
+// const computerSelection = getComputerChoice();
+// let playerSelection = prompt("Enter you choice").toUpperCase();
+// console.log(computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
+console.log(game());
