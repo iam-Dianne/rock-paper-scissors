@@ -11,17 +11,49 @@ function getComputerChoice() {
         return randomNum;
     }
 
-    // assigning the random number to it's abilitiessss
-
-    let choice;
+    // assigning the random number to it's abilities
 
     if (randomNumber() === 1) {
-        return "Rock";
+        return "ROCK";
     } else if (randomNumber() === 2) {
-        return "Paper";
+        return "PAPER";
     } else {
-        return "Scissors";
+        return "SCISSORS";
     }
-    
 }
-console.log(getComputerChoice());
+
+
+function playRound(playerSelection, computerSelection) {
+    // this function oversees the game
+
+    let outcome;
+    let playerChoice = playerSelection;
+    let computerChoice = computerSelection;
+
+    if (playerChoice === "ROCK" && computerChoice == "ROCK") {
+        console.log("tie!");
+    } else if (playerChoice === "ROCK" && computerChoice === "PAPER") {
+        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+    } else if (playerChoice === "ROCK" && computerChoice === "SCISSORS") {
+        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+    } else if (playerChoice === "PAPER" && computerChoice === "ROCK") {
+        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+    } else if (playerChoice === "PAPER" && computerChoice === "PAPER") {
+        console.log("Tie!");
+    } else if (playerChoice === "PAPER" && computerChoice === "SCISSORS") {
+        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+    } else if (playerChoice === "SCISSORS" && computerChoice === "ROCK") {
+        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+    } else if (playerChoice === "SCISSORS" && computerChoice === "PAPER") {
+        console.log(`You win! ${playerChoice} beats ${computerChoice}`); 
+    } else if (playerChoice === "SCISSORS" && computerChoice === "SCISSORS") {
+        console.log("Tie!");
+    } else {
+        console.log("You entered an invalid choice.")
+    }
+ }
+
+const playerSelection = "scissors".toUpperCase();
+const computerSelection = getComputerChoice();
+console.log(computerSelection);
+console.log(playRound(playerSelection, computerSelection));
