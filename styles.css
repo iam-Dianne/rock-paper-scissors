@@ -2,6 +2,7 @@ body {
     background-color: #050b28;
     font-family: "Kdam Thmor Pro", sans-serif;
     font-style: normal;
+    font-weight: bolder;
     color: #ffffff;
     font-size: 1rem;
     padding: 1rem 0 0 0;
@@ -36,7 +37,78 @@ header {
 
 
 .logo-container > p {
-    font-weight: bolder;
     font-size: 2rem;
+    line-height: 2px;
+}
+
+#scores-container {
+    height: 100%;
+    width: 75%;
+    min-width: 200px;
+    /*background-color: red;*/
+    color: #050b28;
+
+    display: flex;
+    justify-content: flex-end;
+
+}   
+
+.player-score-container {
+    height: 100%;
+    width: 22%;
+    min-width: 50px;
+    /*background-color: blue;*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.player-score-info, .computer-score-info{
+    height: 90%;
+    width: 100%;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player-score-text, .computer-score-text {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    /*add background-color: red;*/
+}
+
+.player-score, .computer-score {
+    margin-top: -25px;
+    
+    display: flex;
+    justify-content: center;
+    /*background-color: red;*/
+}
+
+#official-player-score, #official-comp-score {
+    font-size: 4rem;
+}
+
+.computer-score-container {
+    height: 100%;
+    width: 22%;
+    min-width: 50px;
+    /*background-color: blue;*/
+    margin-left: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-height {
     line-height: 2px;
 }
