@@ -9,6 +9,8 @@ body {
     margin: 0;
 }
 
+/*HEADER STYLES*/
+
 header {
     width: 100%;
     height: 20vh;
@@ -50,6 +52,7 @@ header {
 
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 
 }   
 
@@ -65,7 +68,7 @@ header {
 } 
 
 .player-score-info, .computer-score-info{
-    height: 90%;
+    height: 83%;
     width: 100%;
     margin: auto;
     background-color: #ffffff;
@@ -111,4 +114,58 @@ header {
 
 .line-height {
     line-height: 2px;
+}
+
+
+/*STYLES FOR BATTLEGROUNDS*/
+
+.main-battlegrounds {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+}
+
+.player-choice-container, .computer-choice-container {
+    height: 85%;
+    width: 13vw;
+
+    /*background-color: pink;*/
+}
+
+.player-choice-text, .computer-choice-text {
+    height: 20%;
+    width: 100%;
+    /*background-color: red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-choice-icon, .computer-choice-icon {
+    height: 80%;
+    width: 100%;
+    /*background-color: red;*/
+}
+
+.player-choice-f-icon, .computer-choice-f-icon {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    border: 2px solid #53586c; 
+}
+
+.result-container {
+    height: 40%;
+    width: 45vh;
+    /*background-color: green;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-text {
+    font-size: 2rem;
 }
