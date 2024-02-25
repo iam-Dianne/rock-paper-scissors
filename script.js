@@ -94,4 +94,5 @@ function game() {
 // let playerSelection = prompt("Enter you choice").toUpperCase();
 // console.log(computerSelection);
 // console.log(playRound(playerSelection, computerSelection));
-console.log(game());
+
+//console.log(game());
