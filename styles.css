@@ -29,6 +29,7 @@ header {
     border-radius: 10px;
     border-color: #53586c;
     padding: 0 2rem;
+    
 
     display: flex; 
 }
@@ -76,6 +77,8 @@ header {
     margin: auto;
     background-color: #ffffff;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+
 
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +160,9 @@ header {
     height: 100%;
     width: 100%;
     border-radius: 100px;
-    border: 2px solid #53586c; 
+    border: 2px solid #53586c;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+
 }
 
 .result-container {
@@ -179,6 +184,7 @@ header {
 .attacks-container{
     height: 30vh;
     width: 100%;
+    padding-top: 1vh;
 
     /*background-color: red;*/
 }
@@ -208,5 +214,33 @@ button {
     height: 110px;
     width: 110px;
     border-radius: 100px;
-    border: 10px solid #53586c ;
+    border: 10px solid;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    height: 140px;
+    width: 140px;
+    border: 20px solid;
+}
+
+.icon-img {
+    height: 70px;
+}
+
+#rock-attack {
+    border-color: #9D0191;
+}
+
+#paper-attack {
+    border-color: #FAA300;
+}
+
+#scissor-attack {
+    border-color: #FF1E1E;
 }
