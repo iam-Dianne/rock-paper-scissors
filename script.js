@@ -1,21 +1,17 @@
 function getComputerChoice() {
-    function randomNumber() {
         // function that returns a random number 1-3
-
         // Math.random returns a floating point between 0 and 1
         // Multiplying this by n gives a floating point number between 0 (inclusive) and n (exclusive).
         // (Math.random() * 3) => random number multiplied by the no. of outcomes (3)
         // + 1 because 1 is the start number; just in case it gives 0
 
-        let randomNum = Math.floor((Math.random() * 3) + 1);
-        return randomNum;
-    }
-
+    let randomNum = Math.floor((Math.random() * 3) + 1);
+    
     // assigning the random number to it's abilities
 
-    if (randomNumber() === 1) {
+    if (randomNum === 1) {
         return "ROCK";
-    } else if (randomNumber() === 2) {
+    } else if (randomNum === 2) {
         return "PAPER";
     } else {
         return "SCISSORS";
@@ -24,6 +20,8 @@ function getComputerChoice() {
 
 let playerScore = 0;
 let computerScore = 0;
+
+
 
 function playRound(playerSelection, computerSelection) {
     // this function oversees the game
@@ -61,9 +59,26 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerChoice === "SCISSORS" && computerChoice === "SCISSORS") {
         console.log("Tie!");
     } else {
-        console.log("You entered an invalid choice.")
+        console.log("You entered an invalid choice.");
     }
- }
+}
+
+// ----- assigning buttons to playerSelection ------
+
+const rockAttack = document.querySelector('#rock-attack');
+rockAttack.addEventListener('click', () => {
+    playRound('ROCK', getComputerChoice());
+})
+
+const paperAttack = document.querySelector('#paper-attack');
+paperAttack.addEventListener('click', () => {
+    playRound('PAPER', getComputerChoice());
+})
+
+const scissorAttack = document.querySelector('#scissor-attack');
+scissorAttack.addEventListener('click', () => {
+    playRound('SCISSORS', getComputerChoice());
+})
 
 
 function game() {
