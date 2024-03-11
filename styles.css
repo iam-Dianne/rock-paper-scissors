@@ -156,13 +156,28 @@ header {
     /*background-color: red;*/
 }
 
+
 .player-choice-f-icon, .computer-choice-f-icon {
+    box-sizing: border-box;
     height: 100%;
     width: 100%;
     border-radius: 100px;
     border: 2px solid #53586c;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#player-icon {
+    border:none;
+    outline: none;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
 }
 
 .result-container {
